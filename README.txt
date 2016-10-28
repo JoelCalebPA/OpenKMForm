@@ -1,6 +1,6 @@
 -- SAMPLES
 -----------
-OptionSelectSampleList	-> load list based on openkm user list  
+OptionSelectSampleList	-> load list based on OpenKM user list  
 
 -- Instructions to create jar file:
 ------------------------------------

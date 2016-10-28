@@ -40,8 +40,10 @@ public class OptionSelectSampleList implements OptionSelectValues {
 	@Override
 	public List<Option> getOptions() throws OptionSelectException {
 		List<Option> options = new ArrayList<Option>();
+		
 		try {
-			// Load select values. In the sample use users list from api call, but also could be thirdparty call or sql to openkm database ( see LegacyDAO)
+			// Load select values. In the sample use users list from API call, but also could be third-party
+			// call or SQL to OpenKM database ( see LegacyDAO )
 			List<String> userList; userList = OKMAuth.getInstance().getUsers(null);
 			for (String user : userList) {
 				Option option = new Option();
@@ -52,6 +54,7 @@ public class OptionSelectSampleList implements OptionSelectValues {
 		} catch (PrincipalAdapterException e) {
 			throw new OptionSelectException(e);
 		}
+		
 		return options;
 	}
 }
